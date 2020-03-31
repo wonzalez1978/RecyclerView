@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import cl.desafiolatam.recyclerview.dummy.DummyContent;
 import cl.desafiolatam.recyclerview.dummy.DummyContent.DummyItem;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -24,7 +25,9 @@ import java.util.List;
  * interface.
  */
 public class RestaurantesFragment extends Fragment {
+    MyRestaurantesRecyclerViewAdapter adapterRestaurantes;
     RecyclerView recyclerView;
+    List<Restaurante>restauranteList;
 
     // TODO: Customize parameters
     private int mColumnCount = 1;
@@ -58,7 +61,15 @@ public class RestaurantesFragment extends Fragment {
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            recyclerView.setAdapter(new MyRestaurantesRecyclerViewAdapter(DummyContent.ITEMS, mListener));
+
+            //LISTA DE RESTAURANTES
+            restauranteList = new ArrayList<>();
+            restauranteList.add(new Restaurante("Pizzeria Carlos", "", 3, "Mexico"));
+            restauranteList.add(new Restaurante("hamburgueseria rápida", "", 5, "Italia"));
+
+            //ASOCIAMOS EL ADAPTADOR AL RECYCLERVIEW
+            adapterRestaurantes = new MyRestaurantesRecyclerViewAdapter(restauranteList, mListener);
+            recyclerView.setAdapter(adapterRestaurantes);
         }
         return view;
     }

@@ -19,10 +19,10 @@ import java.util.List;
  */
 public class MyRestaurantesRecyclerViewAdapter extends RecyclerView.Adapter<MyRestaurantesRecyclerViewAdapter.ViewHolder> {
 
-    private final List<DummyItem> mValues;
+    private final List<Restaurante> mValues;
     private final OnListFragmentInteractionListener mListener;
 
-    public MyRestaurantesRecyclerViewAdapter(List<DummyItem> items, OnListFragmentInteractionListener listener) {
+    public MyRestaurantesRecyclerViewAdapter(List<Restaurante> items, OnListFragmentInteractionListener listener) {
         mValues = items;
         mListener = listener;
     }
@@ -61,7 +61,7 @@ public class MyRestaurantesRecyclerViewAdapter extends RecyclerView.Adapter<MyRe
         public final View mView;
         public final TextView mIdView;
         public final TextView mContentView;
-        public DummyItem mItem;
+        public Restaurante mItem;
 
         public ViewHolder(View view) {
             super(view);
