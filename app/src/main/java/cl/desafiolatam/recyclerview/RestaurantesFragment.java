@@ -12,9 +12,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import cl.desafiolatam.recyclerview.dummy.DummyContent;
-import cl.desafiolatam.recyclerview.dummy.DummyContent.DummyItem;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -64,8 +61,8 @@ public class RestaurantesFragment extends Fragment {
 
             //LISTA DE RESTAURANTES
             restauranteList = new ArrayList<>();
-            restauranteList.add(new Restaurante("Pizzeria Carlos", "", 3, "Mexico"));
-            restauranteList.add(new Restaurante("hamburgueseria rápida", "", 5, "Italia"));
+            restauranteList.add(new Restaurante("Pizzeria Carlos", "", 3.0f, "Roma, Italia"));
+            restauranteList.add(new Restaurante("Sandwish Oscar", "", 5.0f, "Mexico"));
 
             //ASOCIAMOS EL ADAPTADOR AL RECYCLERVIEW
             adapterRestaurantes = new MyRestaurantesRecyclerViewAdapter(restauranteList, mListener);
@@ -104,6 +101,6 @@ public class RestaurantesFragment extends Fragment {
      */
     public interface OnListFragmentInteractionListener {
         // TODO: Update argument type and name
-        void onListFragmentInteraction(DummyItem item);
+        void onListFragmentInteraction(Restaurante item);
     }
 }

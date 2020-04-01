@@ -6,6 +6,14 @@ public class Restaurante {
     private float valoracion;
     private String direccion;
 
+    public Restaurante(String nombre, String urlPhotp, float valoracion, String direccion) {
+        this.nombre = nombre;
+        this.urlPhotp = urlPhotp;
+        this.valoracion = valoracion;
+        this.direccion = direccion;
+
+    }
+
     public String getNombre() {
         return nombre;
     }
@@ -35,13 +43,6 @@ public class Restaurante {
     }
 
     public void setDireccion(String direccion) {
-        this.direccion = direccion;
-    }
-
-    public Restaurante(String nombre, String urlPhotp, float valoracion, String direccion) {
-        this.nombre = nombre;
-        this.urlPhotp = urlPhotp;
-        this.valoracion = valoracion;
         this.direccion = direccion;
     }
 }
