@@ -43,6 +43,8 @@ public class MyRestaurantesRecyclerViewAdapter extends RecyclerView.Adapter<MyRe
         holder.ratingBarValoracionRestaurante.setRating(holder.mItem.getValoracion());
         Picasso.get()
                 .load(holder.mItem.getUrlPhotp())
+                .resize(400, 150)
+                .centerCrop()
                 .into(holder.imageViewPhotoRestaurante);
 
         holder.mView.setOnClickListener(new View.OnClickListener() {

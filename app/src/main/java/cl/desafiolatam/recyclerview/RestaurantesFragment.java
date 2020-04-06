@@ -61,8 +61,10 @@ public class RestaurantesFragment extends Fragment {
 
             //LISTA DE RESTAURANTES
             restauranteList = new ArrayList<>();
-            restauranteList.add(new Restaurante("Pizzeria Carlos", "", 3.0f, "Roma, Italia"));
-            restauranteList.add(new Restaurante("Sandwish Oscar", "", 5.0f, "Mexico"));
+            restauranteList.add(new Restaurante("Pizzeria Carlos", "https://cdn-3.expansion.mx/dims4/default/9186eec/2147483647/strip/true/crop/800x450+0+0/resize/1200x675!/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2F24%2F27%2F3279aad54c27873cb6adece10f9c%2Fvino-pizza-maridaje-1.jpg", 3.0f, "Roma, Italia"));
+            restauranteList.add(new Restaurante("Sandwish Oscar", "https://upload.wikimedia.org/wikipedia/commons/e/e6/BLT_sandwich_on_toast.jpg", 5.0f, "Mexico"));
+            restauranteList.add(new Restaurante("Suchilovers", "https://i.pinimg.com/originals/7c/27/3d/7c273d91040758a157e417afaa90c7e6.jpg", 4.0f, "Santiago, Chile"));
+            restauranteList.add(new Restaurante("Parrilladas La Argentina", "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ5-s1DLX4OX-PyMsUk9Ox5dAahsAOcbpMVR2z-fqQZUo0xx45r&usqp=CAU",5.0f, "Las Rejas, Samtiago"));
 
             //ASOCIAMOS EL ADAPTADOR AL RECYCLERVIEW
             adapterRestaurantes = new MyRestaurantesRecyclerViewAdapter(restauranteList, mListener);
